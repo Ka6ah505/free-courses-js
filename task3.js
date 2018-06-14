@@ -17,13 +17,13 @@ var title1 = "";
 var title2 = "";
 var title3 = "";
 if (hours > 0) {
-	title1 = declination(hours, [' час ', ' часа ', ' часов ']);
+	title1 = hours + declination(hours, [' час ', ' часа ', ' часов ']);
 }
 if (minutes > 0) {
-	title2 = declination(minutes, [' минута ', ' минуты ',' минут ']);
+	title2 = minutes + declination(minutes, [' минута ', ' минуты ',' минут ']);
 }
 if (seconds > 0) {
-	title3 = declination(seconds, [' секунда',' секунды',' секунд']);
+	title3 = seconds + declination(seconds, [' секунда',' секунды',' секунд']);
 }
 
-console.log(hours+title1+minutes+title2+seconds+title3);
+console.log(title1+title2+title3);
