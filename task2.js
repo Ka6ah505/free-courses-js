@@ -44,7 +44,7 @@ var calc_r = function(mass, answ) {
 	//console.log(mass);
 	var temp = -1;
 	// перестановка в перед
-	for (var i = 1; i < l; i++) {
+	for (var i = 1; i <= l; i++) {
 		mass.push(mass.shift()); // push - добавляет в конец, shift - удаляет первый
 		//console.log(mass);
 		if (equals(mass, answ)) {
@@ -59,7 +59,7 @@ var calc_l = function(mass, answ) {
 	var temp = -1;
 	// перестановка назад
 	//console.log(mass);
-	for (var i = 1; i < l; i++) {
+	for (var i = 1; i <= l; i++) {
 		mass.unshift(mass.pop());
 		//console.log(mass);
 		if (equals(mass, answ)) {
@@ -73,8 +73,11 @@ var calc_l = function(mass, answ) {
 // возможно для одинаковых массивов надо 0 выводить
 var i = calc_r(a,b);
 var j = calc_l(a,b);
+//console.log(i,j);
 if (i<j) {
 	console.log(i);
+} else if (i ==a.length && j==a.length) {
+	console.log(-1);
 } else {
-	console.log(j);
+	console.log(j)
 }
